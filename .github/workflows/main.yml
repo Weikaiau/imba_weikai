@@ -26,9 +26,9 @@ jobs:
         id: creds
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AKIAXBJPWBKETU56ASHI }}
-          aws-secret-access-key: ${{ secrets.KnBSB78R7jXAAHwz5KwgLsngoQLkQrfnqxd+suuj }}
-          aws-region: ${{ github.event.inputs.ap-southeast-2 }} 
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KAY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECERT_ACCESS_KEY }}
+          aws-region: ${{ github.event.inputs.region }} 
 
       - name: Deploy S3 Buckets CloudFormation Stacks
         id: s3-buckets
